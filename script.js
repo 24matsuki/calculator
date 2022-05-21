@@ -70,6 +70,9 @@ class Calculator {
   getDisplayNumber(numberString) {
     // Number("")が 0 となってしまい、AC や operation 押下時に curHTML に 0 が表示されてしまう。
     // const integerDigits = Number(numberString.split(".")[0]);
+    if (numberString === "1018") {
+      return "Happy Birthday!!";
+    }
     const integerString = numberString.split(".")[0];
     let integerDisplay;
     if (integerString === "") {
