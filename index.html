@@ -8,20 +8,12 @@
     <link rel="stylesheet" href="style.css" />
     <script src="script.js" defer></script>
     <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="apple-touch-icon" sizes="180x180" href="icon-192x192.png" />
     <script>
-      window.addEventListener("load", function () {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker
-            .register("/sw.js")
-            .then(function (registration) {
-              console.log("serviceWorker registed.");
-            })
-            .catch(function (error) {
-              console.warn("serviceWorker error.", error);
-            });
-        }
-      });
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("/sw.js").then(function () {
+          console.log("Service Worker is registered!!");
+        });
+      }
     </script>
   </head>
   <body>
